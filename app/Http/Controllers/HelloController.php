@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class HelloController extends Controller
 {
     //
-    public function index() {
+     public function index() {
         $name = '侍 太郎';
         $languages = ['HTML', 'CSS', 'JavaScript', 'PHP'];
 
