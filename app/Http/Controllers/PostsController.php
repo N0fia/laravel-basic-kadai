@@ -15,4 +15,5 @@ class PostsController extends Controller
         // 変数$productsをproducts/index.blade.phpファイルに渡す
         return view('posts.index',compact('posts'));
     }
+
 }
