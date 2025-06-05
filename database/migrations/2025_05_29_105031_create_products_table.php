@@ -22,11 +22,11 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        //Schema::dropIfExists('products', function (Blueprint $table) {
+        Schema::dropIfExists('products', function (Blueprint $table) {
         // ロールバック時にvendor_codeカラムの外部キー制約を削除する
-        //$table->dropForeign(['vendor_code']);
+        $table->dropForeign(['vendor_code']);
         // ロールバック時にvendor_codeカラムを削除する
-        //$table->dropColumn('vendor_code');
-        //});
+        $table->dropColumn('vendor_code');
+        });
     }
 };

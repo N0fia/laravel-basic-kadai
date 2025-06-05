@@ -13,7 +13,7 @@ class PostsController extends Controller
         $products = DB::table('posts')->get();
 
         // 変数$productsをproducts/index.blade.phpファイルに渡す
-        return view('posts.index',compact('posts'));
+        return view('posts.index',compact('post'));
     }
 
 }

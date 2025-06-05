@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Http\Request\input;
 use Illuminate\Support\Facades\DB;
 use App\Models\Product;
+use App\Models\Vendor;
+use App\Http\Requests\ProductStoreRequest;
+use App\Http\Requests\ProductUpdateRequest;
 
 class ProductController extends Controller
 {
@@ -24,5 +27,20 @@ class ProductController extends Controller
         // 変数$productをproducts/show.blade.phpファイルに渡す
         //return view('products.show', compact('product'));
         return view('products.show', compact('products'));
+    }
+
+    public function create() {
+        $vendor_codes = Vendor::pluck('vendor_code');
+        return view('products.create', compact('vendor_codes'));
+    }
+    public function store(ProductStoreRequest $request) {
+        //$product = new Product();
+        //$product->product_name = $request-> input('product_name');
+        //$product->price = $request->input('price');
+        //$product->vendor_code = $request->input('vendor_code');
+        //$product->save();
+
+        // リダイレクトさせる
+        //return redirect("/products/{$product->id}");
     }
 }

@@ -11,7 +11,7 @@
      <table>
          <tr>
              <th>ID</th>
-             <td>{{ $posts->id }}</td>
+             <td>{{ $post->id }}</td>
          </tr>
          <tr>
              <th>タイトル</th>
